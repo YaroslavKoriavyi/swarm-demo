@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  service:
+    image: dockersamples/visualizer
+    networks:
+      - backend
+    volumes: 
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    ports:
+      - 8000:8080
+    deploy:
+      placement:
+        constraints:
+          - node.role==manager
+
+networks:
+  backend:
+    external: true
+    name: ${environment}_backend

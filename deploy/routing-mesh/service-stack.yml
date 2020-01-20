@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  service:
+    image: albertogviana/docker-routing-mesh:2.0.0
+    networks:
+      - backend
+    ports:
+      - 8080:8080
+    deploy:
+      replicas: 2
+      resources:
+        reservations:
+          memory: 20M
+  
+networks:
+  backend:
+    external: true
+    name: ${environment}_backend
