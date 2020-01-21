@@ -1,7 +1,7 @@
 # Docker Swarm Presentation
 
 ## Presentation
-[Slides TBD]()
+[Slides](https://github.com/YaroslavKoriavyi/swarm-demo/blob/master/Docker%20Swarm.pptx?raw=true)
 
 
 ## Building a docker swarm cluster
